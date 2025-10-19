@@ -1,14 +1,10 @@
 # precompiled c files
 *.o
 *.gch
-#macos stuff
+# macos stuff
 .DS_Store
-# ignore final exec
-lsys
+# ignore build directory
 build
-
-assets/test.png
+# ignore all the genearted assets for now...
+assets
 .cache
-
-# some examples for references don't check into VC
-rules/examples/*
