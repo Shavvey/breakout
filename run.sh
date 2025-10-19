@@ -4,4 +4,4 @@ cmake -S . -G "Unix Makefiles" -B build
 # compile the project
 cmake --build build 
 # exec final binary 
-build/l-systems
+build/breakout
