@@ -35,7 +35,7 @@ do {                                                                 \
   if ((idx) < 0 || (idx) >= (al)->size) {     \
     eprintf("[ERROR]: Out of range!");        \
   }                                           \
-  for (size s = (idx); i < (al)->size; s++) { \
+  for (size_t s = (idx); i < (al)->size; s++) { \
        (al)->items[i] = (al)->items[i+1];     \
   }                                           \
   (al)->size--;                               \
@@ -45,6 +45,12 @@ do {                                                                 \
  (al)->size = 0;              \
  (al)->capacity = 0;          \
  free((al)->items);           \
+}while(0)
+
+#define alist_foreach(al, body) do {        \
+  for (size_t i = 0; i < (al)->size; i++) { \
+    body((al)->items + i);                  \
+  }                                         \
 }while(0)
 
 #endif  // INCLUDE_SRC_COMMON_H_
