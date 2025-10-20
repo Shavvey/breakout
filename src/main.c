@@ -13,9 +13,9 @@ int main(void) {
   while (!WindowShouldClose()) {
     ClearBackground(BLACK);
     BeginDrawing();
+    DrawRectangle(SCREEN_WIDTH/2 - 10/2, SCREEN_HEIGHT/2 - 10/2, 10, 10, WHITE);
     EndDrawing();
   }
   CloseWindow();
   return EXIT_SUCCESS;
 }
-
